@@ -2,22 +2,43 @@
 # Shebang for better file detection
 # shellcheck enable=require-variable-braces
 
+BASE_DISTRO=armbian
+BASE_ROOT_PARTITION=2
 BASE_ARCH="arm64"
-BASE_IMAGE_ENLARGEROOT=10500
+BASE_IMAGE_ENLARGEROOT=8192
 BASE_IMAGE_RESIZEROOT=600
+BASE_IMAGE_RASPBIAN=no
 BASE_ADD_USER="yes"
 BASE_USER="pi"
 BASE_USER_PASSWORD="raspberry"
 
 # Image source
-DOWNLOAD_URL_CHECKSUM="https://github.com/bigtreetech/CB1/releases/download/V2.3.1/CB1_Debian11_Klipper_kernel5.16_20230215.img.sha256"
-DOWNLOAD_URL_IMAGE="https://github.com/bigtreetech/CB1/releases/download/V2.3.1/CB1_Debian11_minimal_kernel5.16_20230215.img.xz"
+DOWNLOAD_URL_CHECKSUM="https://github.com/bigtreetech/CB1/releases/download/V2.3.3/CB1_Debian11_minimal_kernel5.16_20230712.img.sha256"
+DOWNLOAD_URL_IMAGE="https://github.com/bigtreetech/CB1/releases/download/V2.3.3/CB1_Debian11_minimal_kernel5.16_20230712.img.xz"
+
+# Custom
+RATOS_CONFIGURATOR_SHIP=https://github.com/asychev/RatOS-configurator.git
+RATOS_CONFIGURATOR_BRANCH=v2.x-deployment-cb1
+
+RATOS_CONFIG_SHIP=https://github.com/asychev/RatOS-configuration.git
+RATOS_CONFIG_BRANCH=v2.x-manta-m4p-2.2
 
 # export Variables
+export BASE_DISTRO
+export BASE_ROOT_PARTITION
 export BASE_ARCH
 export BASE_IMAGE_ENLARGEROOT
 export BASE_IMAGE_RESIZEROOT
+export BASE_IMAGE_RASPBIAN
+export BASE_ADD_USER
+export BASE_USER
+export BASE_USER_PASSWORD
 export DOWNLOAD_URL_CHECKSUM
 export DOWNLOAD_URL_IMAGE
 
-export MODULES="base,deb_namserver,passwordless_sudo,pkgupgrade(network,cb1config,klipper,node,is_req_preinstall,moonraker,cb1spi,ratos(mainsail,crowsnest,linear_movement_analysis,timelapse,klipperscreen,rpi_mcu,disable-services(hotspot_cb1),dfu-util),password-for-sudo),postrename"
+export RATOS_CONFIGURATOR_SHIP
+export RATOS_CONFIGURATOR_BRANCH
+export RATOS_CONFIG_SHIP
+export RATOS_CONFIG_BRANCH
+
+export MODULES="base,cb1cleanup,passwordless_sudo(cb1config,pkgupgrade(network,cb1spi,klipper,node,is_req_preinstall,moonraker,ratos(mainsail,crowsnest,linear_movement_analysis,timelapse,klipperscreen,rpi_mcu,disable-services(hotspot),dfu-util)))"

@@ -25,33 +25,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Create Matrix
-        id: set-matrix
-        run: |
-          ARRAY=$(find ${{ github.workspace }}/config -type f -printf '%P\n' | sed '/default/d' | sort | jq -R -s -c 'split("\n")[:-1]')
-          echo "matrix=${ARRAY}" >> $GITHUB_OUTPUT
-
-  build:
-    needs: setup
+  build-cb1:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        config: ${{ fromJson(needs.setup.outputs.matrix) }}
     steps:
-      - name: Build image
+      - name: Build CB1 image
         id: build
         uses: mainsail-crew/MainsailOS-actions/build-image@master
         with:
-          config: ${{ matrix.config }}
+          config: armbian/CB1
 
       - name: Rename image file
         id: move-image

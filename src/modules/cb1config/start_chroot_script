@@ -41,8 +41,4 @@ if [[ -f "${PICONFIG_SWAP_CONF_FILE}" ]]; then
     sed -i 's/^#CONF_MAXSWAP.*/'CONF_MAXSWAP="${PICONFIG_SWAP_MAX}"'/' "${PICONFIG_SWAP_CONF_FILE}"
 fi
 
-# install avahi so ratos.local works
-check_install_pkgs avahi
-
-#add the same groups as the biqu user
-usermod -a -G disk,audio,plugdev,games,users,systemd-journal,input,netdev,ssh "${BASE_USER}"
+check_install_pkgs avahi-daemon dhcpcd5 systemd-timesyncd
