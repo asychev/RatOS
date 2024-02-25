@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   build-cb1:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
     steps:
