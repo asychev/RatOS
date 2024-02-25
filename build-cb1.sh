@@ -9,7 +9,7 @@ fi
 cat "./config/default" >> ./src/config
 cat "./config/armbian/CB1" >> ./src/config
 source ./src/config
-IMGCOUNT=$(find ./src/image/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17_minimal.img.xz | wc -l)
+IMGCOUNT=$(find ./src/image/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17.img.xz | wc -l)
 if [ "$IMGCOUNT" -eq 0 ]; then
 	echo "Downloading image..."
 	find ./src/image -type f -not -name '.gitkeep' -delete

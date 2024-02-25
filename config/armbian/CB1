@@ -6,14 +6,15 @@ BASE_DISTRO=armbian
 BASE_ARCH="arm64"
 BASE_IMAGE_ENLARGEROOT=8192
 BASE_IMAGE_RESIZEROOT=600
+BASE_BOOT_MOUNT_PATH=/boot
 BASE_IMAGE_RASPBIAN=no
 BASE_ADD_USER="yes"
 BASE_USER="pi"
 BASE_USER_PASSWORD="raspberry"
 
 # Image source
-DOWNLOAD_URL_CHECKSUM="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17_minimal.img.xz.sha"
-DOWNLOAD_URL_IMAGE="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17_minimal.img.xz"
+DOWNLOAD_URL_CHECKSUM="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17.img.xz.sha"
+DOWNLOAD_URL_IMAGE="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17.img.xz"
 
 # Custom
 RATOS_CONFIGURATOR_SHIP=https://github.com/asychev/RatOS-configurator.git
@@ -27,6 +28,7 @@ export BASE_DISTRO
 export BASE_ARCH
 export BASE_IMAGE_ENLARGEROOT
 export BASE_IMAGE_RESIZEROOT
+export BASE_BOOT_MOUNT_PATH
 export BASE_IMAGE_RASPBIAN
 export BASE_ADD_USER
 export BASE_USER
