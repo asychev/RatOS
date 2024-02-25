@@ -12,8 +12,8 @@ BASE_USER="pi"
 BASE_USER_PASSWORD="raspberry"
 
 # Image source
-DOWNLOAD_URL_CHECKSUM="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_jammy_current_6.6.17.img.xz.sha"
-DOWNLOAD_URL_IMAGE="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_jammy_current_6.6.17.img.xz"
+DOWNLOAD_URL_CHECKSUM="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17_minimal.img.xz.sha"
+DOWNLOAD_URL_IMAGE="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_bookworm_current_6.6.17_minimal.img.xz"
 
 # Custom
 RATOS_CONFIGURATOR_SHIP=https://github.com/asychev/RatOS-configurator.git
