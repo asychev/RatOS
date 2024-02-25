@@ -3,7 +3,6 @@
 # shellcheck enable=require-variable-braces
 
 BASE_DISTRO=armbian
-BASE_ROOT_PARTITION=2
 BASE_ARCH="arm64"
 BASE_IMAGE_ENLARGEROOT=8192
 BASE_IMAGE_RESIZEROOT=600
@@ -25,7 +24,6 @@ RATOS_CONFIG_BRANCH=v2.x-manta-m4p-2.2
 
 # export Variables
 export BASE_DISTRO
-export BASE_ROOT_PARTITION
 export BASE_ARCH
 export BASE_IMAGE_ENLARGEROOT
 export BASE_IMAGE_RESIZEROOT
