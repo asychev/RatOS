@@ -13,8 +13,7 @@ BASE_USER="pi"
 BASE_USER_PASSWORD="raspberry"
 
 # Image source
-DOWNLOAD_URL_CHECKSUM="https://github.com/bigtreetech/CB1/releases/download/V2.3.3/CB1_Debian11_minimal_kernel5.16_20230712.img.sha256"
-DOWNLOAD_URL_IMAGE="https://github.com/bigtreetech/CB1/releases/download/V2.3.3/CB1_Debian11_minimal_kernel5.16_20230712.img.xz"
+DOWNLOAD_URL_IMAGE="https://dl.armbian.com/bigtreetech-cb1/archive/Armbian_24.2.2_Bigtreetech-cb1_jammy_current_6.6.17.img.xz"
 
 # Custom
 RATOS_CONFIGURATOR_SHIP=https://github.com/asychev/RatOS-configurator.git
