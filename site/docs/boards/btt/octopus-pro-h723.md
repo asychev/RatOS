@@ -4,10 +4,10 @@ sidebar_label: Octopus Pro h723
 
 # BIGTREETECH Octopus Pro STM32H723
 
-:::danger V1.0 of this board can be dangerous
-When this board boots into DFU mode (which happens during firmware updates), the heater pins on HE0 and HE2 will be set to high, meaning your hotend will heat up for the duration of the firmware update process.
+:::danger V1.0 of this board can be dangerous, version 1.1 is fine.
+When the V1.0 version of this board boots into DFU mode (which happens during firmware updates), the heater pins on HE0 and HE2 will be set to high, meaning your hotend will heat up for the duration of the firmware update process.
 For this reason automatic firmware updates is disabled by default for the Octopus Pro H723 v1.0 boards in RatOS. You'll have to flash it through the [RatOS Configurator](http://RatOS.local/configure?step=2) when needed, 
-and monitor it closely, preferably disconnect the heater from the board.
+and monitor it closely, preferably disconnect the heater from the board. The V1.1 version updates automatically as it does not have this problem. 
 See the [Octopus Pro readme](<https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro?tab=readme-ov-file#octopus-pro-v11>)
 :::
 
